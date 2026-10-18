@@ -36,7 +36,7 @@ flowchart LR
     LINT["1. Lint & Secrets\n(Gitleaks)"] --> TEST["2. Tests Auto\n(Unit & Intégration)"]
     TEST --> SAST["3. Analyse SAST\n(SonarQube / Semgrep)"]
     SAST --> BUILD["4. Build Multi-stage\n(Docker & BuildKit)"]
-    BUILD --> SCAN["5. Scan Image & SCA\n(Trivy)"]
+    BUILD --> SCAN["5. Scan Image\n(Trivy)"]
     SCAN --> DEPLOY["6. Deploy Staging\n(Review App)"]
     DEPLOY --> DAST["7. Scan DAST\n(OWASP ZAP)"]
 ```
@@ -66,8 +66,9 @@ flowchart LR
    - Exploiter le cache BuildKit (`--cache-from`).
    - Générer un inventaire des composants logiciels (**SBOM**) au format CycloneDX ou SPDX.
 
-5. **Software Composition Analysis (SCA) & Scan Conteneur (B5C1) :**
-   - Intégrer **Trivy** pour auditer le système de fichiers (`trivy fs`) et l'image Docker finale (`trivy image`).
+5. **Scan des Vulnérabilités de l'Image Conteneur (B5C1) :**
+   - Intégrer **Trivy** pour auditer l'image Docker finale construite (`trivy image`).
+   - Détection des vulnérabilités de l'OS de base et des dépendances embarquées.
    - Seuil de rupture bloquant : arrêt de la pipeline en cas de vulnérabilité `CRITICAL`.
 
 6. **Déploiement Staging & Pentest Dynamique DAST (B5C2) :**
