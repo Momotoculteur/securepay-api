@@ -11,7 +11,7 @@
 
 Vous venez d'être recrutés en tant qu'**Ingénieurs Platform & DevSecOps** au sein de **SecurePay Solutions**, une FinTech en forte croissance fournissant des API de paiement pour le e-commerce.
 
-L'entreprise est en cours de mise en conformité avec les réglementations bancaires et les standards de sécurité **ISO 27001** et **PCI-DSS v4.0**.
+L'entreprise est en cours de mise en conformité avec sa Politique de Sécurité des Systèmes d'Information (PSSI) et les exigences strictes de production.
 
 Actuellement, l'équipe de développement déploie manuellement l'application sur des serveurs Linux via SSH. Un audit externe de cybersécurité a rendu un rapport alarmant sur ce dépôt :
 

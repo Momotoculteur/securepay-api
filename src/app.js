@@ -30,7 +30,7 @@ app.get('/api/info', (req, res) => {
   return res.json({
     name: 'SecurePay Solutions Core API',
     version: '1.0.0',
-    compliance: 'PCI-DSS v4.0 (In Progress)'
+    compliance: 'PSSI (In Progress)'
   });
 });
 
