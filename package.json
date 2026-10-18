@@ -1,0 +1,39 @@
+{
+  "name": "securepay-api",
+  "version": "1.0.0",
+  "description": "SecurePay Solutions - Core Payment Processing API (Legacy)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "jest --ci --reporters=default --reporters=jest-junit",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsonwebtoken": "8.5.1",
+    "axios": "0.21.1",
+    "lodash": "4.17.20"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "./reports",
+    "outputName": "junit.xml"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
