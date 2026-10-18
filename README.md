@@ -140,14 +140,3 @@ Vérifier l'état de santé :
 curl http://localhost:3000/health
 ```
 
----
-
-## 5. Modalités de Soutenance & Live Demo (Jour 4)
-
-Chaque binôme disposera de **25 minutes** :
-- **15 minutes de présentation & Démonstration en Direct :**
-  - Présentation synthétique de l'architecture CI/CD (5 min).
-  - Démonstration du pipeline nominal au vert (5 min).
-  - **Live Attack / Injection (5 min) :** Pousser en direct devant l'examinateur une branche contenant soit un secret fuité, soit une faille de code, et **prouver que votre pipeline bloque net la livraison**.
-- **10 minutes d'échanges techniques :**
-  - Questions sur vos choix d'ingénierie, la conformité PSSI et la gestion des faux positifs.
